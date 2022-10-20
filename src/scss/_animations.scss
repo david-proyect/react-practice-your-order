@@ -1,0 +1,149 @@
+/* Animaciones --------------------------    */
+.fadeIn {
+    animation: fadeInElement 0.7s forwards;
+}
+
+.shake-bell {
+    animation: shakeBells .5s ease;
+}
+
+.push-btn {
+    transition: box-shadow .5s ease-in-out;
+
+    &:active {
+      animation: pushElement .5s ease;
+    }
+}
+
+.shadow-press {
+    animation: shadowPress .3s ease;
+}
+
+
+/* -------------------------------------------------------------- */
+
+@keyframes fadeInElement{
+    from{
+        opacity: 0;
+        margin-top: -20px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes shakeBells {
+    0% {
+        transform: rotate(35deg);
+    }
+    12.5% {
+        transform: rotate(-30deg);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    37.5% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    62.5% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
+
+  @keyframes fadeTrick {
+    0% {
+        transform: translateY(0) scale(0);
+    }
+    80% {
+        transform: translateY(-14px);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes pushElement {
+    from {
+      transform: scale(.8);
+      box-shadow: none;
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shadowPress {
+    from {
+        box-shadow: inherit;
+    }
+    to {
+        box-shadow: none;
+    }
+  }
+
+  /* Animation para el menu hamburguesa en mobile ------- */
+  @keyframes menuWave1 {
+    0% {
+        opacity: 0;
+        width: 24px;
+        margin-right: 5px;
+    }
+    40% {
+        opacity: .5;
+        width: 16px;
+        margin-right: 12px;
+    }
+    100% {
+        opacity: 1;
+        width: 24px;
+        margin-right: 5px;
+    }
+  }
+
+  @keyframes menuWave2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+        width: 24px;
+        margin-left: 1px;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+  @keyframes menuWave3 {
+    0% {
+        opacity: 0;
+        
+    }
+    40% {
+        opacity: .5;
+        width: 16px;
+        margin-right: 12px;
+    }
+    60% {
+        opacity: 1;
+        width: 24px;
+        margin-right: 5px;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+    /* Cierre animation para el menu hamburguesa en mobile ------- */
+
+
+  /* Cierre de Animaciones --------------------------    */

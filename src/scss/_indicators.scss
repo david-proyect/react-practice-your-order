@@ -1,0 +1,123 @@
+.idcators {
+
+    &__title {
+        font-family: 'Integral CF';
+        color: $txt;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 15px 0;
+    }
+
+    &__item {
+        margin: 0.3rem;
+
+        &__content {
+            border: 1px solid $stroke;
+            border-radius: 6px;
+            padding: 10px;
+            max-width: 212px;
+            min-height: 110px;
+            width: 100%;
+            position: relative;
+
+            &__plus {
+                content: url("./assets/images/icons/plus-icon.svg");
+                position: absolute;
+                top: -16px;
+                right: -17px;
+                cursor: pointer;
+            }
+
+            &__label {
+                color: $txt;
+                font-size: 14px;
+                font-weight: 300;
+
+                @include media(350) {
+                    font-size: 13px;
+                }
+            }
+
+            &__box {
+
+                @include flex;
+                @include justify-content(space-between);
+
+                &--special {
+                    height: 100%;
+                    min-height: 56px;
+
+                    -webkit-align-self: flex-start;
+                    -ms-flex-item-align: start;
+                    align-self: flex-start;
+
+                    h2 {
+                        font-size: 26px;
+
+                        @include media(350) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    img {
+                        padding-bottom: 0;
+                    }
+
+                    & > div {
+
+                        @include flex-column;
+
+                        span {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            &__cage {
+
+                @include flex;
+
+                span {
+                    color: $green;
+                    font-size: 18px;
+                    padding: 10px;
+                    margin-top: auto;
+
+                    @include media(350) {
+                        font-size: 16px;
+                        padding-bottom: 6px;
+                    }
+                }
+            }
+
+            &__value {
+                color: $txt;
+                font-size: 50px;
+                font-weight: bold;
+                margin: 0;
+
+                @include media(350) {
+                    font-size: 38px;
+                }
+            }
+
+            &__icon {
+                width: auto;
+                height: 36px;
+                padding-bottom: 8px;
+
+                -webkit-align-self: flex-end;
+                -ms-flex-item-align: end;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .p-carousel-container .p-carousel-indicators, .p-carousel-items-container {
+        height: 150px;
+        
+        @include align-items(center);
+    }
+}

@@ -1,0 +1,40 @@
+.main-banner {
+
+    .p-galleria-content {
+
+        .p-galleria-item-wrapper {
+
+            @include align-items(center);
+
+            .p-galleria-item-container {
+
+                .p-galleria-item {
+    
+                    img {
+                        display: block;
+                        width: 100%;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .p-galleria .p-galleria-indicators {
+        position: absolute;
+        bottom: 0;
+
+        .p-galleria-indicator button {
+            background-color: $c4;
+            width: 12px;
+            height: 12px;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .p-galleria-indicator.p-highlight button {
+            background-color: $white;
+        }
+    }
+}

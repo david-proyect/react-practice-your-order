@@ -1,0 +1,246 @@
+/* Estilos para las tablas  */
+.generic-table-content {
+    border: 1px solid $stroke;
+    border-radius: 6px;
+    
+    &__head {
+        padding: 10px 15px;
+
+        @include flex;
+        @include justify-content(space-between);
+
+        p {
+            color: $txt;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            @include media (768) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__filter {
+        cursor: pointer;
+
+        @include flex;
+        @include align-items(center);
+
+        img {
+            width: 18px;
+        }
+
+        label {
+            color: $txt;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+    }
+
+    &__paginator {
+        padding: 10px 100px 10px 15px;
+
+        @include flex;
+        @include align-items(center);
+        @include justify-content(flex-end);
+
+        @include media (768) {
+            padding: 10px 0;
+
+            @include justify-content(center);
+        }
+
+        .paginator-rows {
+            padding: 0 6px;
+            margin-right: 18px;
+
+            p {
+                color: $softGrey;
+                font-size: 14px;
+                margin: 0;
+
+                span {
+                    color: $txt;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .paginator-pages {
+            padding: 0 6px;
+            margin-right: 18px;
+
+            p {
+                color: $softGrey;
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+
+        .paginator-arrows {
+
+            &__left {
+                width: 8px;
+                height: auto;
+                margin-right: 12px;
+                transform: rotate(180deg);
+                cursor: pointer;
+            }
+
+            &__right {
+                width: 8px;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.generic-table {
+
+ td {
+
+        p {
+            color: $txt;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        label {
+            color: $softGrey;
+            font-size: 12px;
+        }
+
+    }
+
+    &__icon {
+
+        @include flex;
+
+        img {
+            width: 38px;
+        }
+
+        &__box {
+            padding-left: 10px;
+        }
+    }
+
+    .status-tags {
+        border-radius: 50px;
+
+        label {
+            color: $white;
+            font-size: 10px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            max-width: 84px;
+            padding: 3px 6px;
+
+            @include flex;
+            @include align-items(center);
+            @include justify-content(center);
+
+            @include media(768) {
+
+                margin: 0 auto;
+            }
+        }
+
+        &--progress {
+
+            label {
+                background-color: $yellow;
+            }
+        }
+        &--confirm {
+
+            label {
+                background-color: $otherGreen;
+            }
+        }
+        &--hold {
+
+            label {
+                background-color: $orange;
+            }
+        }
+    }
+
+    .more-icon {
+
+        img {
+            width: 4px;
+            height: 16px;
+            cursor: pointer;
+            opacity: .5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.p-datatable table .p-datatable-thead > tr > th {
+    background-color: $white;
+    color: $softGrey;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 1rem;
+
+    @include media (768){
+        display: none;
+    }
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    padding: 8px 1rem;
+
+    @include media (768){
+        display: block;
+        padding: 7px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        &::before {
+            content: attr(data-label);
+            color: $txt;
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            padding-bottom: 6px;
+        }
+
+    }
+}
+
+.p-datatable table .p-datatable-thead tr th {
+
+    &:first-child {
+        width: 24%;
+
+        @include media (768) {
+            width: 100%;
+        }
+    }
+
+    &:last-child {
+        width: 6%;
+
+        @include media (768) {
+            width: 100%;
+        }
+    }
+}
+
+.p-datatable .p-datatable-tbody tr td {
+
+    &:last-child {
+        text-align: center;
+    }
+}
+/* Cierre estilos para las tablas  */

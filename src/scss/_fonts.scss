@@ -1,0 +1,41 @@
+/* Fuentes originales de Argos ------- */
+@font-face {
+    font-family: 'Integral CF';
+    src: url("./assets/fonts/integral-cf/IntegralCF-Regular.eot");
+    src: url("./assets/fonts/integral-cf/IntegralCF-Regular.eot");
+    src: url('./assets/fonts/integral-cf/IntegralCF-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/integral-cf/IntegralCF-Regular.woff2') format('woff2'),
+        url('./assets/fonts/integral-cf/IntegralCF-Regular.woff') format('woff'),
+        url('./assets/fonts/integral-cf/IntegralCF-Regular.ttf') format('truetype'),
+        url('./assets/fonts/integral-cf/IntegralCF-Regular.svg#IntegralCF-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TradeGothic regular';
+    src: url('./assets/fonts/trade-gothic/TradeGothicLTStd.eot');
+    src: url('./assets/fonts/trade-gothic/TradeGothicLTStd.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/trade-gothic/TradeGothicLTStd.woff2') format('woff2'),
+        url('./assets/fonts/trade-gothic/TradeGothicLTStd.woff') format('woff'),
+        url('./assets/fonts/trade-gothic/TradeGothicLTStd.ttf') format('truetype'),
+        url('./assets/fonts/trade-gothic/TradeGothicLTStd.svg#TradeGothicLTStd') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TradeGothic bold';
+    src: url('./assets/fonts/trade-gothic/TradeGothicLT-Bold.eot');
+    src: url('./assets/fonts/trade-gothic/TradeGothicLT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/trade-gothic/TradeGothicLT-Bold.woff2') format('woff2'),
+        url('./assets/fonts/trade-gothic/TradeGothicLT-Bold.woff') format('woff'),
+        url('./assets/fonts/trade-gothic/TradeGothicLT-Bold.ttf') format('truetype'),
+        url('./assets/fonts/trade-gothic/TradeGothicLT-Bold.svg#TradeGothicLT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/* Cierre Fuentes originales de Argos */
