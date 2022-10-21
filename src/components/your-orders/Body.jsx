@@ -3,9 +3,8 @@ import freedomicon from '../../assets/images/icons/freedom-icon.svg'
 import pendingicons from '../../assets/images/icons/pending-icon.svg'
 
 
-const Body = () => {
+const Body = (props) => {
 return (
-
 <div className="order-body alert__wrap">
     <div className="order-boxes split-border">
         <div className="order-boxes__data">
@@ -34,13 +33,13 @@ return (
         <div className="order-info split-border switch-muted">
             <ul className="order-info__ul text-left">
                 <li className="order-info__li">
-                    Condición de pago: <strong>yyyyyy</strong>
+                    Condición de pago: <strong>{props.order.Cabecera.PAYCONDITIONDESC}</strong>
                 </li>
                 <li className="order-info__li">
-                    Condición de entrega: <strong>yyyyyy</strong>
+                    Condición de entrega: <strong>{props.order.Cabecera.UNLOADTYPEDESC}</strong>
                 </li>
                 <li className="order-info__li">
-                    Tipo de descargue: <strong>yyyy</strong>
+                    Tipo de descargue: <strong>{props.order.Cabecera.UNLOADTYPEDESC}</strong>
                 </li>
             </ul>
         </div>
@@ -48,7 +47,7 @@ return (
         <div className="order-boxes__data">
             <p className="order-boxes__text little-steez">Total</p>
             <p className="order-boxes__text total-steez">
-                $ 3.566884 <span className="skinny-iva">(con IVA)</span>
+                $ {props.order.Cabecera.ORDERAMOUNT} <span className="skinny-iva">(con IVA)</span>
             </p>
         </div>
         {/* <div className="order-boxes__keypad">

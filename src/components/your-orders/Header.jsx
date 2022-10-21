@@ -4,32 +4,33 @@ import calendariconblue from '../../assets/icons/calendar-icon-blue.svg'
 import piniconblue from '../../assets/icons/pin-icon-blue.svg'
 import processordericonblue from '../../assets/icons/process-order-icon-blue.svg'
 
-const Header = () => {
+const Header = (props) => {
+    console.log(props)
   return (
     <div className="order-head">
         <div className="order-head__item">
             <div className="order-head__item__icon">
                 <img src={carticonblue} alt="Icono Pedido" />
             </div>
-            <p>Pedido N° 34312124</p>
+            <p>Pedido N° {props.order.Cabecera.SONUMBER}</p>
         </div>
         <div className="order-head__item">
             <div className="order-head__item__icon">
                 <img src={calendariconblue} alt="Icono Calendario" />
             </div>
-            <p>Fecha de pedido 12/02"2022</p>
+            <p>Fecha de pedido {props.order.Cabecera.ORDERDATE}</p>
         </div>
         <div className="order-head__item">
             <div className="order-head__item__icon">
                 <img src={piniconblue} alt="Icono dirección" />
             </div>
-            <p>3343434</p>
+            <p>{props.order.SHIPTO}</p>
         </div>
         <div className="order-head__item">
             <div className="order-head__item__icon">
                 <img src={processordericonblue} alt="Icono # orden" />
             </div>
-            <p>Orden de compra: 345343434</p>
+            <p>Orden de compra: {props.order.Cabecera.PURORDER}</p>
         </div>
     </div>
   )
